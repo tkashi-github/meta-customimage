@@ -18,9 +18,10 @@ display_banner() {
 }
 delete_opt() {
     # delete /opt
-    rm -rf ${IMAGE_ROOTFS}/opt/g2d_samples
+    rm -rf ${IMAGE_ROOTFS}/opt/imx-gpu-sdk
+    rm -rf ${IMAGE_ROOTFS}/opt/imx8-isp
     rm -rf ${IMAGE_ROOTFS}/opt/viv_samples
-    rm -rf ${IMAGE_ROOTFS}/usr/share/examples
+    rm -rf ${IMAGE_ROOTFS}/opt/ltp
 }
 
 ROOTFS_POSTPROCESS_COMMAND += "display_banner;"
