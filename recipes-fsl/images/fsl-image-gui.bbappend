@@ -2,6 +2,8 @@ SUMMARY = "bitbake-layers recipe"
 DESCRIPTION = "Recipe created by bitbake-layers"
 LICENSE = "MIT"
 
+IMAGE_FEATURES += "read-only-rootfs"
+
 add_my_files() {
     cp -ar ../sources/meta-customimage/recipes-fsl/images/files/*  ${IMAGE_ROOTFS}/
 }
@@ -11,10 +13,6 @@ display_banner() {
     echo "*  Example recipe created by bitbake-layers   *"
     echo "*                                             *"
     echo "***********************************************"
-
-    echo -n "Updating font cache ..."
-	fc-cache -f > /dev/null
-	echo "Done."
 }
 delete_opt() {
     # delete /opt

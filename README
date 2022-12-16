@@ -20,3 +20,27 @@ Execute the bitbake command as follows.
 $ bitbake fsl-image-gui
 ```
 
+# SWUpdate
+## Create a SWUpdate-ready Image
+Follow steps 1-3 of the Yocto Build Release page.
+Build a recovery SD card and the var-image-swupdate image as the recovery image
+```
+$ bitbake fsl-image-gui      (for the recovery SD card)
+$ bitbake var-image-swupdate
+```
+
+## Create the "SWUpdate recovery SD card"
+```
+$ sudo MACHINE=imx8mp-var-dart ../sources/meta-variscite-sdk/scripts/var_mk_yocto_sdcard/var-create-yocto-sdcard.sh -r tmp/deploy/images/imx8mp-var-dart/var-image-swupdate-imx8mp-var-dart /dev/sdX
+(Replace /dev/sdX with your actual device)
+```
+
+## 2.3 Generate a Field Update file (.swu image)
+```
+$ bitbake var-image-swu
+```
+
+in Command line
+```
+$ LC_CTYPE="en_US.utf8" swupdate -H imx8mp-var-dart:1.0 -i <filename.swu>
+```
