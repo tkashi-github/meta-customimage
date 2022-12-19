@@ -4,5 +4,7 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 SRC_URI += " \
             file://defconfig \
+            file://0001-add-imx8mp-var-dart-dt8mcustomboard_custom.dtb-to-ma.patch \
+            file://0001-add-imx8mp-var-dart-dt8mcustomboard_custom.dts.patch \
 "
 KBUILD_DEFCONFIG_imx8mp-var-dart = ""
