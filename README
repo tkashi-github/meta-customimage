@@ -44,3 +44,23 @@ in Command line
 ```
 $ LC_CTYPE="en_US.utf8" swupdate -H imx8mp-var-dart:1.0 -i <filename.swu>
 ```
+
+
+# Customize Linux Kernel
+
+* menu config
+```
+$ bitbake -c menuconfig virtual/kernel
+```
+
+* save as defconfig
+```
+$ bitbake -c savedefconfig virtual/kernel
+```
+
+* Copy defconfig to meta-customimage layer
+```
+$ cp /Path/To/tmp/work/imx8mp_var_dart-fslc-linux/linux-variscite/5.15.60+gitAUTOINC+a0198bb5f0-r0/build/defconfig /Path/To/var-fsl-yocto/sources/meta-customimage/recipes-kernel/linux/files/
+
+ex. $ cp ./tmp/work/imx8mp_var_dart-fslc-linux/linux-variscite/5.15.60+gitAUTOINC+a0198bb5f0-r0/build/defconfig /opt/var-fsl-yocto/sources/meta-customimage/recipes-kernel/linux/files/
+```
