@@ -1,4 +1,4 @@
-SUMMARY = "bitbake-layers recipe"
+SUMMARY = "Customized fsl-image-gui recipe"
 DESCRIPTION = "Recipe created by bitbake-layers"
 LICENSE = "MIT"
 
