@@ -40,14 +40,14 @@ $ sudo MACHINE=imx8mp-var-dart ../sources/meta-variscite-sdk/scripts/var_mk_yoct
 $ bitbake var-image-swu
 ```
 
-in Command line
+アップデートするときは実機にswuファイルをコピーして以下のコマンドを実行
 ```
 $ LC_CTYPE="en_US.utf8" swupdate -H imx8mp-var-dart:1.0 -i <filename.swu>
 ```
 
 
 # Customize Linux Kernel
-
+以下の手順でdefcinfigファイルを作成してコピーできます（パッチファイルを書かなくてよい）
 * menu config
 ```
 $ bitbake -c menuconfig virtual/kernel
@@ -64,3 +64,17 @@ $ cp /Path/To/tmp/work/imx8mp_var_dart-fslc-linux/linux-variscite/5.15.60+gitAUT
 
 ex. $ cp ./tmp/work/imx8mp_var_dart-fslc-linux/linux-variscite/5.15.60+gitAUTOINC+a0198bb5f0-r0/build/defconfig /opt/var-fsl-yocto/sources/meta-customimage/recipes-kernel/linux/files/
 ```
+
+defconfigが容易で来たらlinux-variscite_5.15.bbappendにSRC_UI += でファイルを追加し、bitbakeします。
+```
+$ bitbake linux-variscite
+```
+
+# Customize u-boot
+たぶんpatch書いた方が早いよ
+
+```
+$ bitbake u-boot-variscite
+```
+
+
