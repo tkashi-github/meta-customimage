@@ -19,7 +19,7 @@ index 1b6274f439..1e336d4a69 100644
 +CONFIG_BOOTDELAY=0
  CONFIG_BOOTCOMMAND="run bsp_bootcmd"
 -CONFIG_DEFAULT_FDT_FILE="imx8mp-var-dart-dt8mcustomboard.dtb"
-+CONFIG_DEFAULT_FDT_FILE="imx8mp-var-dart-dt8mcustomboard-custom.dtb"
++CONFIG_DEFAULT_FDT_FILE="imx8mp-var-dart-dt8mcustomboard-legacy-m7-custom.dtb"
  CONFIG_BOARD_EARLY_INIT_F=y
  CONFIG_BOARD_LATE_INIT=y
  CONFIG_SPL_BOARD_INIT=y
