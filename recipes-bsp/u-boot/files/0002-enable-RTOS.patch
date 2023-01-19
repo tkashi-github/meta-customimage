@@ -18,7 +18,7 @@ index 85b4eb6100..a87afcf44e 100644
 -	"m7_bin=hello_world.bin\0" \
 -	"use_m7=no\0" \
 +	"m7_bin=M7RTOS.bin\0" \
-+	"use_m7=yes\0" \
++	"use_m7=no\0" \
  	"dfu_alt_info=mmc 2=1 raw 0x40 0x1000 mmcpart\0" \
  	"loadm7bin=" \
  	         "load mmc ${mmcdev}:${mmcpart} ${loadaddr} ${bootdir}/${m7_bin} && " \

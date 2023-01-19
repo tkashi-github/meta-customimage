@@ -31,7 +31,7 @@ $ bitbake var-image-swupdate
 
 ## Create the "SWUpdate recovery SD card"
 ```
-$ sudo MACHINE=imx8mp-var-dart ../sources/meta-variscite-sdk/scripts/var_mk_yocto_sdcard/var-create-yocto-sdcard.sh -r tmp/deploy/images/imx8mp-var-dart/var-image-swupdate-imx8mp-var-dart /dev/sdX
+$ sudo MACHINE=imx8mp-var-dart ../sources/meta-variscite-sdk/scripts/var_mk_yocto_sdcard/var-create-yocto-sdcard.sh -r tmp/deploy/images/imx8mp-var-dart/var-image-swupdate-imx8mp-var-dart /dev/sdb
 (Replace /dev/sdX with your actual device)
 ```
 
